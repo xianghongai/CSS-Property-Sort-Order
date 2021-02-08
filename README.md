@@ -1,221 +1,246 @@
 秩(zhì)序(xù) / order 🌿
 
-```yml
-  ## 布局 / Layout
-  ### 显示、定位 / Display, Position
-  - 'display'
-  - 'visibility'
+不建议按属性首字母顺序声明样式，如 `position: absolute;` 中的 `top/right/bottom/left`定位，中间会被 `width/height/padding` 这类属性间隔，不方便维护。建议按属性类别声明样式：
 
-  - 'float'
-  - 'clear'
+* 影响文档流的属性 (`display`, Position (`top`, `right`, `bottom`, `left`, `z-index`), Flex/Grid/Columns )
+* 盒模型的属性 (`box-sizing`, Width, Height, Margin, Padding, Overflow, Border, Outline)
+* 背景装饰属性 (Backgrounds, `box-shadow`, `color`, `opacity`)
+* 排版属性 (Fonts, Text, Line, Table)
+* CSS3 动画属性 (Transform, Transition, Animation)
+* 生成内容属性及其它属性 (`content`, `quotes`, `cursor`)
 
-  - 'position'
-  - 'top'
-  - 'right'
-  - 'bottom'
-  - 'left'
-  - 'z-index'
 
-  ### Flex
-  - 'flex-direction'
-  - 'flex-wrap'
-  - 'flex-flow'
-  - 'justify-content'
-  - 'align-items'
-  - 'align-content'
+```markdown
+## 影响文档流的属性 (Display, Position, Flex/Grid/Columns )
 
-  - 'flex-grow'
-  - 'flex-shrink'
-  - 'flex-basis'
-  - 'flex'
-  - 'align-self'
-  - 'order'
+### 显示、定位 / Display, Position
 
-  ### Grid
-  - 'grid'
-  - 'grid-area'
-  - 'grid-template'
-  - 'grid-template-areas'
-  - 'grid-template-rows'
-  - 'grid-template-columns'
-  - 'grid-column'
-  - 'grid-column-start'
-  - 'grid-column-end'
-  - 'grid-row'
-  - 'grid-row-start'
-  - 'grid-row-end'
-  - 'grid-auto-rows'
-  - 'grid-auto-columns'
-  - 'grid-auto-flow'
-  - 'grid-gap'
-  - 'grid-row-gap'
-  - 'grid-column-gap'
-  - 'justify-items'
-  - 'align-items'
-  - 'place-items'
-  - 'justify-self'
-  - 'align-self'
-  - 'place-self'
-  - 'justify-content'
-  - 'align-content'
-  - 'place-content'
+- 'display'
+- 'visibility'
 
-  ### Columns
-  - 'columns'
-  - 'column-gap'
-  - 'column-fill'
-  - 'column-rule'
-  - 'column-rule-width'
-  - 'column-rule-style'
-  - 'column-rule-color'
-  - 'column-span'
-  - 'column-count'
-  - 'column-width'
+- 'float'
+- 'clear'
 
-  ## 盒模型 / Box
-  - 'box-sizing'
+- 'position'
+- 'top'
+- 'right'
+- 'bottom'
+- 'left'
+- 'z-index'
 
-  - 'width'
-  - 'min-width'
-  - 'max-width'
+### Flex
 
-  - 'height'
-  - 'min-height'
-  - 'max-height'
+- 'flex-direction'
+- 'flex-wrap'
+- 'flex-flow'
+- 'justify-content'
+- 'align-items'
+- 'align-content'
 
-  - 'margin'
-  - 'margin-top'
-  - 'margin-right'
-  - 'margin-bottom'
-  - 'margin-left'
+- 'flex-grow'
+- 'flex-shrink'
+- 'flex-basis'
+- 'flex'
+- 'align-self'
+- 'order'
 
-  - 'padding'
-  - 'padding-top'
-  - 'padding-right'
-  - 'padding-bottom'
-  - 'padding-left'
+### Grid
 
-  - 'overflow'
-  - 'overflow-x'
-  - 'overflow-y'
-  - 'resize'
+- 'grid'
+- 'grid-area'
+- 'grid-template'
+- 'grid-template-areas'
+- 'grid-template-rows'
+- 'grid-template-columns'
+- 'grid-column'
+- 'grid-column-start'
+- 'grid-column-end'
+- 'grid-row'
+- 'grid-row-start'
+- 'grid-row-end'
+- 'grid-auto-rows'
+- 'grid-auto-columns'
+- 'grid-auto-flow'
+- 'grid-gap'
+- 'grid-row-gap'
+- 'grid-column-gap'
+- 'justify-items'
+- 'align-items'
+- 'place-items'
+- 'justify-self'
+- 'align-self'
+- 'place-self'
+- 'justify-content'
+- 'align-content'
+- 'place-content'
 
-  ### Border
-  - 'border'
-  - 'border-top'
-  - 'border-right'
-  - 'border-bottom'
-  - 'border-left'
-  - 'border-width'
-  - 'border-top-width'
-  - 'border-right-width'
-  - 'border-bottom-width'
-  - 'border-left-width'
+### Columns
 
-  - 'border-style'
-  - 'border-top-style'
-  - 'border-right-style'
-  - 'border-bottom-style'
-  - 'border-left-style'
+- 'columns'
+- 'column-gap'
+- 'column-fill'
+- 'column-rule'
+- 'column-rule-width'
+- 'column-rule-style'
+- 'column-rule-color'
+- 'column-span'
+- 'column-count'
+- 'column-width'
 
-  - 'border-radius'
-  - 'border-top-left-radius'
-  - 'border-top-right-radius'
-  - 'border-bottom-left-radius'
-  - 'border-bottom-right-radius'
+## 盒模型的属性 (Box Sizing, Width, Height, Margin, Padding, Overflow, Border, Outline)
 
-  - 'border-color'
-  - 'border-top-color'
-  - 'border-right-color'
-  - 'border-bottom-color'
-  - 'border-left-color'
+### 盒模型 / Box
 
-  - 'outline'
-  - 'outline-color'
-  - 'outline-offset'
-  - 'outline-style'
-  - 'outline-width'
+- 'aspect-ratio'
+- 'box-sizing'
 
-  ## 背景装饰，文字排版 / Backgrounds, Fonts
-  ### box-shadow
-  - 'box-shadow'
+- 'width'
+- 'min-width'
+- 'max-width'
 
-  ### Background
-  - 'background'
-  - 'background-attachment'
-  - 'background-clip'
-  - 'background-color'
-  - 'background-image'
-  - 'background-repeat'
-  - 'background-position'
-  - 'background-size'
+- 'height'
+- 'min-height'
+- 'max-height'
 
-  ### Text
-  - 'color'
+- 'margin'
+- 'margin-top'
+- 'margin-right'
+- 'margin-bottom'
+- 'margin-left'
 
-  - 'font'
-  - 'font-family'
-  - 'font-size'
-  - 'font-smoothing'
-  - 'font-style'
-  - 'font-variant'
-  - 'font-weight'
+- 'padding'
+- 'padding-top'
+- 'padding-right'
+- 'padding-bottom'
+- 'padding-left'
 
-  - 'letter-spacing'
-  - 'line-height'
-  - 'list-style'
+- 'overflow'
+- 'overflow-x'
+- 'overflow-y'
+- 'resize'
 
-  - 'text-align'
-  - 'text-decoration'
-  - 'text-indent'
-  - 'text-overflow'
-  - 'text-rendering'
-  - 'text-shadow'
-  - 'text-transform'
-  - 'text-wrap'
+### Border
 
-  - 'white-space'
-  - 'word-spacing'
+- 'border'
+- 'border-top'
+- 'border-right'
+- 'border-bottom'
+- 'border-left'
+- 'border-width'
+- 'border-top-width'
+- 'border-right-width'
+- 'border-bottom-width'
+- 'border-left-width'
 
-  ## CSS3 动画 /
-  ### Transform
-  - 'backface-visibility'
-  - 'perspective'
-  - 'perspective-origin'
-  - 'transform'
-  - 'transform-box'
-  - 'transform-origin'
-  - 'transform-style'
+- 'border-style'
+- 'border-top-style'
+- 'border-right-style'
+- 'border-bottom-style'
+- 'border-left-style'
 
-  ### Transition
-  - 'transition'
-  - 'transition-delay'
-  - 'transition-duration'
-  - 'transition-property'
-  - 'transition-timing-function'
+- 'border-radius'
+- 'border-top-left-radius'
+- 'border-top-right-radius'
+- 'border-bottom-left-radius'
+- 'border-bottom-right-radius'
 
-  ### Animation
-  - 'animation'
-  - 'animation-name'
-  - 'animation-delay'
-  - 'animation-duration'
-  - 'animation-iteration-count'
-  - 'animation-play-state'
-  - 'animation-timing-function'
-  - 'animation-fill-mode'
+- 'border-color'
+- 'border-top-color'
+- 'border-right-color'
+- 'border-bottom-color'
+- 'border-left-color'
 
-  ## 表格 / Table
-  - 'table-layout'
-  - 'border-collapse'
-  - 'border-spacing'
-  - 'caption-side'
-  - 'empty-cells'
-  - 'vertical-align'
+- 'outline'
+- 'outline-color'
+- 'outline-offset'
+- 'outline-style'
+- 'outline-width'
 
-  ## 其它 / Other
-  - 'content'
-  - 'quotes'
-  - 'cursor'
-  - 'opacity'
-  - 'speak'
-  ```
+## 背景装饰属性 (Backgrounds, Box Shadow, Color, Opacity)
+
+- 'background'
+- 'background-attachment'
+- 'background-clip'
+- 'background-color'
+- 'background-image'
+- 'background-repeat'
+- 'background-position'
+- 'background-size'
+
+- 'box-shadow'
+
+- 'color'
+
+- 'opacity'
+
+## 排版属性 (Fonts, Text, Line, Table)
+
+- 'font'
+- 'font-family'
+- 'font-size'
+- 'font-smoothing'
+- 'font-style'
+- 'font-variant'
+- 'font-weight'
+
+- 'letter-spacing'
+- 'line-height'
+- 'list-style'
+
+- 'text-align'
+- 'text-decoration'
+- 'text-indent'
+- 'text-overflow'
+- 'text-rendering'
+- 'text-shadow'
+- 'text-transform'
+- 'text-wrap'
+
+- 'white-space'
+- 'word-spacing'
+
+- 'table-layout'
+- 'border-collapse'
+- 'border-spacing'
+- 'caption-side'
+- 'empty-cells'
+- 'vertical-align'
+
+## CSS3 动画属性 (Transform, Transition, Animation)
+
+### Transform
+
+- 'backface-visibility'
+- 'perspective'
+- 'perspective-origin'
+- 'transform'
+- 'transform-box'
+- 'transform-origin'
+- 'transform-style'
+
+### Transition
+
+- 'transition'
+- 'transition-delay'
+- 'transition-duration'
+- 'transition-property'
+- 'transition-timing-function'
+
+### Animation
+
+- 'animation'
+- 'animation-name'
+- 'animation-delay'
+- 'animation-duration'
+- 'animation-iteration-count'
+- 'animation-play-state'
+- 'animation-timing-function'
+- 'animation-fill-mode'
+
+## 生成内容属性及其它属性
+
+- 'content'
+- 'quotes'
+- 'cursor'
+- 'speak'
+```
